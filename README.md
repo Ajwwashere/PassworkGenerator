@@ -1,1 +1,2 @@
 # PassworkGenerator
+basic password generator 
