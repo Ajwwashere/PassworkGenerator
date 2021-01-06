@@ -1,42 +1,15 @@
 //console.log("it works right?")
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-var questions = [
-    {
-        q: "Is this for the question?",
-        a: true
-    },
-    {
-        q: "Is this this an object?",
-        a: true
-    },
-    {
-        q: "How do you fix a broken computer? Is it 'turn it off and on again'?",
-        a: true
-    },
-    {
-        q: "Do we need 10 questions?",
-        a: true
-    },
-    {
-        q: "How many licks to the center of a tootsie pop? Do we really know",
-        a: false
-    }
-];
+  passwordText.value = password;
 
-var score = 0;
-
-for(var i = 0; i < questions.length; i++){
-    // console.log(questions[i]);
-    var user = confirm(questions[i].q);
-
-    if(user === questions[i].a){
-        score++;
-        alert("Correct! Here's candy!");
-    }
-    else{
-        alert("Incorrect!");
-    }
 }
 
-alert("You scored " + score + " out of " + questions.length);
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
